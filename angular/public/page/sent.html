@@ -1,0 +1,14 @@
+<h1>Messages envoyés</h1>
+<div class="noMessage">
+    <div class="alert alert-info" role="alert" ng-show="noMessage">{{noMessage}}</div>
+</div>
+<div class="mail-container">
+    <a ng-repeat="mail in mailsSent | reverse" href="#/sent/{{mail['#']}}">
+        <div class="mail">
+            <div class="square">{{mail.envelope.to[0].address[0]}}</div>
+            <div class="from">{{mail.envelope.to[0].address}}</div>
+            <div class="subject">{{mail.envelope.subject}}</div>
+            <div class="date">{{mail.envelope.date}}</div>
+        </div>
+    </a>
+</div>

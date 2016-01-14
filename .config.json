@@ -1,0 +1,14 @@
+{
+    "retr_protocol": "imap",
+    "auth": {
+	"user": "exemple@gmail.com",
+	"pass": ""
+    },
+    "reception": {
+	"host": "imap.gmail.com",
+	"port": "993"
+    },
+    "sent": {
+	"host": "smtp.gmail.com"
+    }
+}

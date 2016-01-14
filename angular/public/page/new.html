@@ -1,0 +1,13 @@
+<h1>Nouveau message</h1>
+
+<form class="new-message" name="sendMailForm" ng-controller="SendMailCtrl" ng-submit="submit()">
+    <div class="alert alert-danger" role="alert" ng-show="error.length">{{error}}</div>
+    <div class="alert alert-success" role="alert" ng-show="success.length">{{success}}</div>
+    <label for="dest">Destinataire</label>
+    <input ng-model="dest" type="text" id="dest" placeholder="Destinataire" name="dest" />
+    <label for="subject">Objet</label>
+    <input ng-model="subject" type="text" id="subject" placeholder="Object" />
+    <label for="message">Message</label>
+    <textarea ng-model="message" id="message" placeholder="Message" rows="8"></textarea>
+    <center><button type="submit" class="btn btn-default">Envoyer !</button></center>
+</form>

@@ -1,0 +1,11 @@
+<h1>Boite de réception</h1>
+<div class="mail-container">
+    <a ng-repeat="mail in mails | reverse" href="#/mail/{{mail['#']}}">
+        <div class="mail">
+            <div class="square">{{mail.envelope.sender[0].name[0]}}</div>
+            <div class="from">{{mail.envelope.sender[0].name}}</div>
+            <div class="subject">{{mail.envelope.subject}}</div>
+            <div class="date">{{mail.envelope.date}}</div>
+        </div>
+    </a>
+</div>

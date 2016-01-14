@@ -1,0 +1,306 @@
+@color-blue: #0187D2;
+@size-nav: 300px;
+@box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+
+html, body {
+    height: 100%;
+}
+
+nav {
+    height: 100%;
+    background-color: #03A9F4;
+    width: @size-nav;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    box-shadow: @box-shadow;
+    border-right: 1px solid @color-blue;
+
+    img {
+        display: block;
+        margin: auto;
+        width: 60%;
+        margin-top: 40px;
+    }
+
+    h3 {
+        width: 100%;
+        color: white;
+        margin: 0;
+        position: relative;
+        top: -30px;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 20px;
+
+    }
+
+    ul {
+        text-align: center;
+        padding: 0;
+
+        a {
+            display: block;
+            border-bottom: 1px solid white;
+            color: white;
+
+            li {
+                list-style: none;
+                font-size: 18px;
+                padding: 10px 0;
+                cursor: pointer;
+            }
+
+            &.new {
+                background-color: white;
+                color: @color-blue;
+            }
+
+            &:hover {
+                text-decoration: none;
+                color: black;
+            }
+
+            &:last-child {
+                border: 0;
+            }
+        }
+    }
+
+    button {
+        background: 0;
+        border: 0;
+        text-align: center;
+        margin: auto;
+        display: block;
+        margin-top: 20px;
+        font-size: 40px;
+        color: white;
+    }
+}
+
+.content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #eee;
+    padding: 50px;
+    padding-left: (@size-nav + 50);
+    padding-bottom: 25px;
+    padding-top: 20px;
+    overflow-y: auto;
+    
+    .loading {
+        position: relative;
+    }
+
+    h1 {
+        color: #666;
+        padding-bottom: 25px;
+    }
+
+    .error {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 30px;
+        padding-top: 22%;
+        color: #F44336;
+        text-shadow: 0px 0px 20px rgba(255, 0, 0, 0.6);
+
+        span {
+            font-size: 100px;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        button {
+            display: block;
+            margin: auto;
+            margin-top: 10px;
+        }
+    }
+}
+
+.mail-container {
+    width: 100%;
+    height: 100%;
+    box-shadow: @box-shadow;
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .mail {
+        width: 100%;
+        display: flex;
+        height: 50px;
+        background-color: white;
+        font-size: 16px;
+        line-height: 50px;
+        border-bottom: 1px solid #ddd;
+        cursor: pointer;
+        position: relative;
+        text-decoration: none;
+
+        .square {
+            position: absolute;
+            top: 7px;
+            left: 15px;
+            height: 36px;
+            width: 36px;
+            background-color: red;
+            border-radius: 50%;
+            line-height: 36px;
+            color: #ddd;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .from {
+            width: 400px;
+            text-align: left;
+            padding-left: 60px;
+        }
+
+        .subject {
+            color: #666;
+            margin-right: auto;
+        }
+
+        .date {
+            min-width: 150px;
+            color: #888;
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        &:hover {
+            height: 55px;
+            line-height: 55px;
+            background-color: #ededed;
+
+            .square {
+                top: 9px;
+            }
+        }
+    }
+}
+
+.print-mail {
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+    background-color: #fcfcfc;
+    box-shadow: @box-shadow;
+
+    .subject {
+        padding: 15px;
+        font-size: 20px;
+        border-bottom: 1px solid #777;
+        position: relative;
+
+        .delete {
+            position: absolute;
+            right: 10px;
+            top: 12px;
+        }
+    }   
+
+    .from {
+        padding: 15px;
+        font-size: 16px;
+        border-bottom: 1px solid #777;
+    } 
+
+    .date {
+        padding: 15px;
+        font-size: 16px;
+        border-bottom: 1px solid #777;
+    }    
+
+    .message {
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+.new-message {
+    background-color: #fdfdfd;
+    padding: 20px;
+    width: 100%;
+    box-shadow: @box-shadow;
+
+    label {
+        display: block;
+        font-size: 16px;
+    }
+
+    input, textarea {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        border: 0;
+        border-left: 3px solid @color-blue;
+        padding: 10px;
+        font-size: 20px;
+        background-color: #efefef;
+        border-radius: 2px;
+    }
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: 25%;
+    position: relative;
+    text-align: center;
+
+    -webkit-animation: rotate 2.0s infinite linear;
+    animation: rotate 2.0s infinite linear;
+}
+
+.dot1, .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: @color-blue;
+    border-radius: 100%;
+
+    -webkit-animation: bounce 2.0s infinite ease-in-out;
+    animation: bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+    top: auto;
+    bottom: 0px;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+@-webkit-keyframes bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bounce {
+    0%, 100% { 
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 50% { 
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}

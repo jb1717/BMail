@@ -1,0 +1,4 @@
+#!/bin/bash
+
+node ./api/app.js > .api_log &
+node ./angular/http-server ./angular/public

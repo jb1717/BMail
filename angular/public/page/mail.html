@@ -1,0 +1,13 @@
+<h1>Lecture d'un email</h1>
+
+<div class="alert alert-danger" role="alert" ng-show="error.length">{{error}}</div>
+
+<div class="print-mail">
+    <div class="subject">
+        {{mail.envelope.subject}}
+        <button ng-click="delete()" class="delete btn btn-danger">Supprimer</button>
+    </div>
+    <div class="from">De : {{mail.envelope.sender[0].name}} ({{mail.envelope.sender[0].address}})</div>
+    <div class="date">{{mail.envelope.date}}</div>
+    <div class="message">{{mail.content}}</div>
+</div>
