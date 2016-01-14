@@ -10,5 +10,9 @@ Then, open the file angular/public/js/app.js and change the value of ipApi at li
 Magic happens here :
 `./Mailissa`
 
+### Team organisation
+jb1717 made the back-end (/api folder)
+dorianamouroux made the front-end (/angular)
+
 ### Contrubution
  Feel free to do some pull request if you want to improve our project
